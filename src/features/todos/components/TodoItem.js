@@ -1,14 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { selectByTodoId, RemoveTodo } from "../reducers/todosSlice";
+import { selectByTodoId, RemoveTodo, ToggleTodo } from "../reducers/todosSlice";
 import { useSelector } from "react-redux";
 
 function TodoItem(props) {
     const todo = useSelector(state => selectByTodoId(state, props.itemId))
     const dispatch = useDispatch();
 
-    function strikeThroughText() {
-        // document.getElementById(todo).style.textDecoration='line-through';        
+    function strikeThroughText(event) {
+        dispatch(ToggleTodo(props.itemId));   
     }
 
     function removeTodoHandler(event) {
