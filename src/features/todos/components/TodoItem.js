@@ -9,11 +9,11 @@ function TodoItem(props) {
     const dispatch = useDispatch();
     const todoStatus = todo.done ? "done":"undone";
 
-    function strikeThroughText(event) {
+    function strikeThroughText() {
         dispatch(ToggleTodo(props.itemId));
     }
 
-    function removeTodoHandler(event) {
+    function removeTodoHandler() {
         dispatch(RemoveTodo(props.itemId));
     }
 
