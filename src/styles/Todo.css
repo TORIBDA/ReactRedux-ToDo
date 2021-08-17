@@ -1,6 +1,45 @@
+.TodoItem{
+    padding-left: 0px;
+    margin-top: 5px;
+}
 .TodoItem.done{
     text-decoration: line-through;
 }
 .TodoItem.undone{
     text-decoration: none;
+}
+.removeButton{
+    background-color: rgb(194, 21, 21);
+    color: white;
+    border: solid rgb(194, 21, 21) ;
+    text-align: center;
+}
+.removeButton:hover{
+    background-color: rgb(233, 16, 59);
+    border: solid rgb(233, 16, 59) ;
+    color: white;
+    cursor: pointer;
+}
+
+.Column{
+    width: 50%;
+    float: left;
+}
+
+.Column.TodoList{
+    background-color: rgb(252, 241, 220);
+    padding-bottom: 30px;
+}
+
+.Column.TodoItem{
+    margin-left: 12.5%;
+    width: 70%;
+    padding-left: 5px;
+    background-color: rgb(255, 247, 235);
+    border-bottom: rgb(214, 146, 19) solid 1px;
+}
+.Column.RemoveItem{
+    padding-top: 2px;
+    width: 5%;
+    float: left;
 }

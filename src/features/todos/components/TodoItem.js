@@ -19,12 +19,14 @@ function TodoItem(props) {
 
     return (        
         <div>
-            <span className={`TodoItem ${todoStatus}`} onClick={strikeThroughText}>
-                Entities:&nbsp;
-                {todo.text},&nbsp;
-                {todo.done.toString()}
-            </span>
-            <button onClick={removeTodoHandler}>X</button>
+            <div className="Column TodoItem">
+                <span className={`TodoItem ${todoStatus}`} onClick={strikeThroughText}>
+                    {todo.text}
+                </span>
+            </div>
+            <div className="Column RemoveItem">                
+                <button className="removeButton" onClick={removeTodoHandler}>X</button>
+            </div>
         </div>
     );
 }

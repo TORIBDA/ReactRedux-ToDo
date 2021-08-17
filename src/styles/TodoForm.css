@@ -1,0 +1,32 @@
+.Picture{
+    padding-top: 10px;
+    background-image: url(../resources/takingNotes.jpg);
+    background-color: honeydew;
+    height: 500px;
+    width: 100%; 
+}
+
+.FormInput{
+    text-align: center;
+}
+
+.TodoInput{
+    border: 1px solid rgb(112, 82, 0);
+    font-size: 30px;
+    width: 70%;
+}
+
+.TodoButtonAdd{
+    color: white;
+    border: none;
+    text-emphasis: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: rgb(36, 146, 9);
+    font-size: 30px;
+}
+
+.TodoButtonAdd:hover{
+    background-color: rgb(47, 189, 12);
+    cursor: pointer;
+}

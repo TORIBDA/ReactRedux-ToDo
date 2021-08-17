@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useDispatch } from "react-redux";
 import { AddTodo } from "../reducers/todosSlice";
+import "../../../styles/TodoForm.css";
 
 function TodoForm() {
     const [text, setText] = useState("");
@@ -17,13 +18,14 @@ function TodoForm() {
     }
 
     return (    
-        <div>            
-            <input type="text" 
-            placeholder="input a new to-do item"
-            value={text}
-            onChange={changeHandler}
-            />
-            <button onClick={addToDoHandler}>Add</button>
+        <div className="Picture">      
+            <div className="FormInput">
+                <input className="TodoInput" type="text" 
+                    placeholder="input a new to-do item"
+                    value={text}
+                    onChange={changeHandler}/>
+                <button className="TodoButtonAdd" onClick={addToDoHandler}>+</button>
+            </div>
         </div>
     );
 }
