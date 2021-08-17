@@ -16,13 +16,13 @@ function TodoItem(props) {
     }
 
     return (        
-        <div onClick={strikeThroughText}>
-            <p id={todo.id}>ID:&nbsp;{todo.id}&nbsp;Entities:&nbsp;
-                {todo.text},&nbsp;
-                {todo.text2},&nbsp;
+        <div>
+            <span onClick={strikeThroughText}>
+                ID:&nbsp;{todo.id}&nbsp;Entities:&nbsp;
+                {todo.text},
                 {todo.done.toString()}
-                <button onClick={removeTodoHandler}>X</button>
-            </p>
+            </span>
+            <button onClick={removeTodoHandler}>X</button>
         </div>
     );
 }
