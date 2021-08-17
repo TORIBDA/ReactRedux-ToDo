@@ -25,13 +25,15 @@ const todosSlice = createSlice({
                 done: false
             });
             return state;
+        },
+        RemoveTodo(state, key) {
+            todosAdapter.removeOne(state, key)
         }
     }
 });
 
 export default todosSlice.reducer;
 
-export const {AddTodo} = todosSlice.actions;
+export const {AddTodo, RemoveTodo} = todosSlice.actions;
 
 export const {selectIds: selectTodoIds, selectById: selectByTodoId} = todosAdapter.getSelectors(state => state.todoList);
-// export const {selectById: setEntityValue} = todosAdapter.setOne( , )
