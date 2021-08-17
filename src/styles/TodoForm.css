@@ -1,9 +1,10 @@
 .Picture{
     padding-top: 10px;
     background-image: url(../resources/takingNotes.jpg);
-    background-color: honeydew;
+    background-color: rgb(139, 97, 4);
     height: 500px;
-    width: 100%; 
+    width: 100%;
+    background-repeat: no-repeat;
 }
 
 .FormInput{
