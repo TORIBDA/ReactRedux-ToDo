@@ -1,6 +1,4 @@
 import TodoItem from "./TodoItem";
-// import { initialToDoList } from "../../../common/constants/constants";
-// import { getAllTodoIds} from "../../../common/utils/utils";
 import { selectTodoIds } from "../reducers/todosSlice";
 import { useSelector } from "react-redux";
 
