@@ -1,0 +1,6 @@
+.TodoItem.done{
+    text-decoration: line-through;
+}
+.TodoItem.undone{
+    text-decoration: none;
+}
