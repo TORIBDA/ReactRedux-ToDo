@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { useDispatch } from "react-redux";
 import { AddTodo } from "../reducers/todosSlice";
 import "../../../styles/TodoForm.css";
+import { createTodo } from "../../../api/todosAPI";
+
 
 function TodoForm() {
     const [text, setText] = useState("");
@@ -11,7 +13,12 @@ function TodoForm() {
         if(text === ''){
             return alert("Please kindly fill the input field. (^_^)v");
         }
-        dispatch(AddTodo(text));
+        console.log("Tried to insert Text: ", text);
+        createTodo(text).then((response) => {
+            console.log("Response: ", response)
+            dispatch(AddTodo(response.data));
+        });
+        //dispatch(AddTodo(text));
         setText("");
     }
 

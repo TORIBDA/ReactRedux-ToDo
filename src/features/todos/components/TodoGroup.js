@@ -1,7 +1,7 @@
 import TodoItem from "./TodoItem";
 import { selectTodoIds } from "../reducers/todosSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { getTodos } from "../../../api/todosAPI"
+import { getAllTodos } from "../../../api/todosAPI"
 import {useEffect} from "react";
 import { AddManyTodo } from "../reducers/todosSlice";
 
@@ -10,7 +10,8 @@ function TodoGroup() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        getTodos().then((response) => {
+        getAllTodos().then((response) => {
+            console.log("Data Retrieved: ", response.data)
             dispatch(AddManyTodo(response.data))
         })
     }, [])
