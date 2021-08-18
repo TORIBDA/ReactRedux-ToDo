@@ -8,7 +8,6 @@ function TodoForm() {
     const dispatch = useDispatch();
 
     function addToDoHandler(){
-        console.log("Current Text Value: ", text);
         dispatch(AddTodo(text));
         setText("");
     }
