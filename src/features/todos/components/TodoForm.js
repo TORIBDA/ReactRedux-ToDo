@@ -18,7 +18,6 @@ function TodoForm() {
             console.log("Response: ", response)
             dispatch(AddTodo(response.data));
         });
-        //dispatch(AddTodo(text));
         setText("");
     }
 
