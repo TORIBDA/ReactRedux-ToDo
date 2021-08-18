@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { selectByTodoId, RemoveTodo, ToggleTodo } from "../reducers/todosSlice";
 import { useSelector } from "react-redux";
 import "../../../styles/Todo.css";
+import { updateToDo } from "../../../api/todosAPI"
 
 function TodoItem(props) {
     const todo = useSelector(state => selectByTodoId(state, props.itemId))
@@ -10,7 +11,9 @@ function TodoItem(props) {
     const todoStatus = todo.done ? "done":"undone";
 
     function toggleToDoHandler() {
-        dispatch(ToggleTodo(props.itemId));
+        updateToDo(todo.id, !todo.done).then((response) => {
+            dispatch(ToggleTodo(response.data));
+        });
     }
 
     function removeTodoHandler() {
