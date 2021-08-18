@@ -3,6 +3,8 @@ import "../../../styles/Todo.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectByTodoId, RemoveTodo, ToggleTodo } from "../reducers/todosSlice";
 import { updateToDo, deleteToDo } from "../../../api/todosAPI"
+import { Button } from 'antd';
+import { DeleteOutlined } from '@ant-design/icons';
 
 function TodoItem(props) {
     const todo = useSelector(state => selectByTodoId(state, props.itemId))
@@ -29,7 +31,10 @@ function TodoItem(props) {
                 </span>
             </div>
             <div className="Column RemoveItem">                
-                <button className="removeButton" onClick={removeTodoHandler}>X</button>
+                {/* <button className="removeButton" onClick={removeTodoHandler}>X</button> */}
+                {/* <Button type="dashed" onClick={removeTodoHandler}>X</Button> */}
+                <Button type="danger" size="small" onClick={removeTodoHandler}><DeleteOutlined /></Button>
+                
             </div>
         </div>
     );
