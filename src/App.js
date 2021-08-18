@@ -1,7 +1,7 @@
 import './App.css';
 import TodoList from './features/todos/components/TodoList';
 import TodoDoneList from './features/todos/components/TodoDoneList';
-import {Route, Link, BrowserRouter, Switch, HashRouter} from "react-router-dom";
+import {Route, Link, BrowserRouter, Switch} from "react-router-dom";
 import React from 'react';
 
 function App() {
@@ -23,9 +23,6 @@ function App() {
         </Switch>
       </BrowserRouter>
     </React.Fragment>
-    // <div>
-    //   <TodoList></TodoList>
-    // </div>
   );
 }
 
