@@ -13,7 +13,6 @@ const todosSlice = createSlice({
                 text: action.payload,
                 done: false
             });
-            return state;
         },
         RemoveTodo(state, key) {
             todosAdapter.removeOne(state, key);
