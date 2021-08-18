@@ -16,7 +16,8 @@ const todosSlice = createSlice({
             todosAdapter.addMany(state, action.payload);
         },
         RemoveTodo(state, key) {
-            todosAdapter.removeOne(state, key);
+            console.log("Remove key: ", key);
+            todosAdapter.removeOne(state, key.payload.id);
         },
         ToggleTodo(state, update){
             console.log(update);

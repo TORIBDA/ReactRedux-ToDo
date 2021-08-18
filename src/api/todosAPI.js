@@ -11,3 +11,8 @@ export const getAllTodos = () => {
 export const updateToDo = (id, done) => {
     return ConstantAPIs.put(`/todos/${id}`, {done});
 };
+
+
+export const deleteToDo = (id) => {
+    return ConstantAPIs.delete(`/todos/${id}`)
+};
