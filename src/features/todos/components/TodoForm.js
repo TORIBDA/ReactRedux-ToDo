@@ -8,6 +8,9 @@ function TodoForm() {
     const dispatch = useDispatch();
 
     function addToDoHandler(){
+        if(text === ''){
+            return alert("Please kindly fill the input field. (^_^)v");
+        }
         dispatch(AddTodo(text));
         setText("");
     }
