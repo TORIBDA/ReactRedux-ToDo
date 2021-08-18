@@ -9,7 +9,7 @@ function TodoItem(props) {
     const dispatch = useDispatch();
     const todoStatus = todo.done ? "done":"undone";
 
-    function strikeThroughText() {
+    function toggleToDoHandler() {
         dispatch(ToggleTodo(props.itemId));
     }
 
@@ -20,7 +20,7 @@ function TodoItem(props) {
     return (        
         <div>
             <div className="Column TodoItem">
-                <span className={`TodoItem ${todoStatus}`} onClick={strikeThroughText}>
+                <span className={`TodoItem ${todoStatus}`} onClick={toggleToDoHandler}>
                     {todo.text}
                 </span>
             </div>
