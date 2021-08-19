@@ -10,6 +10,7 @@ function TodoDoneList() {
     
     return (
         <div className="DoneList">
+            <h1>Done List</h1>
             {todoIds.map((todo) => (
                 <TodoItem key={todo.id} itemId={todo.id}/>
             ))}
