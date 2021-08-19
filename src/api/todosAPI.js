@@ -8,8 +8,8 @@ export const getAllTodos = () => {
     return ConstantAPIs.get("/todos");
 };
 
-export const updateToDo = (id, done) => {
-    return ConstantAPIs.put(`/todos/${id}`, {done});
+export const updateTodoById = (id, text) => {
+    return ConstantAPIs.put(`/todos/${id}`, text);
 };
 
 
