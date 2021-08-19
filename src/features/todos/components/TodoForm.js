@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { AddTodo } from "../reducers/todosSlice";
 import "../../../styles/TodoForm.css";
 import { createTodo } from "../../../api/todosAPI";
+import { Modal } from 'antd';
 
 function TodoForm() {
     const [text, setText] = useState("");
@@ -10,7 +11,10 @@ function TodoForm() {
 
     function addToDoHandler(){
         if(text === ''){
-            return alert("Please kindly fill the input field. (^_^)v");
+            return Modal.error({
+                title: 'Input Can\'t be blank',
+                content: 'Kindly provide input value before trying to add a todo. (^_^)v',
+              });
         }
         createTodo(text).then((response) => {
             dispatch(AddTodo(response.data));
