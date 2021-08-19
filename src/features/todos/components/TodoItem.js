@@ -71,8 +71,11 @@ function TodoItem(props) {
                 </span>
             </div>  
             <div className="Column RemoveItem">                
-                <Button type="danger" size="small" onClick={removeTodoHandler}><DeleteOutlined /></Button> 
-                <Button type="primary" size="small" onClick={showEditTodoModal}><EditOutlined /></Button>              
+                {todoStatus === 'undone'?
+                    <Button type="primary" size="small" onClick={showEditTodoModal}><EditOutlined /></Button>:                    
+                    <Button type="primary" size="small" disabled><EditOutlined /></Button>  
+                }
+                <Button type="danger" size="small" onClick={removeTodoHandler}><DeleteOutlined /></Button>           
             </div>             
             <Modal title="Todo: " 
                 visible={modalVisibilityStatus} 
