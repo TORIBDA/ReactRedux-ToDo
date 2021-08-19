@@ -15,7 +15,7 @@ const todosSlice = createSlice({
         RemoveTodo(state, key) {
             todosAdapter.removeOne(state, key.payload.id);
         },
-        ToggleTodo(state, update){
+        UpdateTodo(state, update){
             todosAdapter.updateOne(state, {
                 id: update.payload.id,
                 changes: update.payload
@@ -26,7 +26,7 @@ const todosSlice = createSlice({
 
 export default todosSlice.reducer;
 
-export const {AddTodo, RemoveTodo, ToggleTodo, AddManyTodo} = todosSlice.actions;
+export const {AddTodo, RemoveTodo, UpdateTodo, AddManyTodo} = todosSlice.actions;
 
 export const {
     selectAll: selectAllTodos,
