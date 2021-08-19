@@ -31,10 +31,7 @@ function TodoItem(props) {
                 </span>
             </div>
             <div className="Column RemoveItem">                
-                {/* <button className="removeButton" onClick={removeTodoHandler}>X</button> */}
-                {/* <Button type="dashed" onClick={removeTodoHandler}>X</Button> */}
-                <Button type="danger" size="small" onClick={removeTodoHandler}><DeleteOutlined /></Button>
-                
+                <Button type="danger" size="small" onClick={removeTodoHandler}><DeleteOutlined /></Button>                
             </div>
         </div>
     );
