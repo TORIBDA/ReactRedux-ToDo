@@ -1,8 +1,11 @@
-body{  
+body {  
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color:rgb(55, 55, 233);
+  background: gray;
+  /* background: url(https://i.imgur.com/Ic0W4fA.jpeg);     */
 }
 
-h1{
+h1 {
   background-color: rgb(174, 243, 174);
   margin-top: 0px;
   text-align: center;
