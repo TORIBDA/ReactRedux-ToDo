@@ -3,13 +3,25 @@ import TodoList from './features/todos/components/TodoList';
 import TodoDoneList from './features/todos/components/TodoDoneList';
 import {Route, Link, BrowserRouter, Switch} from "react-router-dom";
 import React, { useEffect } from 'react';
+import { useDispatch } from "react-redux";
 import Layout, { Header } from 'antd/lib/layout/layout';
 import { Menu } from 'antd';
+import { getAllTodos } from "./api/todosAPI"
+import { AddManyTodo} from "./features/todos/reducers/todosSlice";
 
 function App() {
+
+  const dispatch = useDispatch();
+
   useEffect(() => {
     document.title = "To Do List";
   }, []);
+
+  useEffect(() => {
+      getAllTodos().then((response) => {
+          dispatch(AddManyTodo(response.data))
+      })
+  })
 
   return (
     <React.Fragment>
